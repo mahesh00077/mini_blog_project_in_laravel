@@ -69,6 +69,16 @@
                       <i class="fa fa-file-pdf-o"></i> <span>Generate Pdf</span>
                   </a>
               </li>
+              <li class="{{ request()->is('ajaxproducts') ? 'active' : '' }}">
+                  <a href="{{url('ajaxproducts')}}">
+                      <i class="fa fa-file-pdf-o"></i> <span>CRUD Using AJAX</span>
+                  </a>
+              </li>
+              <li class="{{ request()->is('admin/form_wizard') ? 'active' : '' }}">
+                  <a href="{{url('admin/form_wizard')}}">
+                      <i class="fa fa-file-pdf-o"></i> <span>Form Wizard</span>
+                  </a>
+              </li>
 
 
 

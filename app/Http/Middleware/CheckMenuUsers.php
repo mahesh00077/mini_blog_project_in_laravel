@@ -32,7 +32,7 @@ class CheckMenuUsers
         } */
         if ($POST != '1') {
             // die('aa');
-            return redirect('admin/dashboard');
+            return redirect('admin/dashboard')->with('error', 'Sorry you dont have permission');
         } else {
             return $next($request);
         }

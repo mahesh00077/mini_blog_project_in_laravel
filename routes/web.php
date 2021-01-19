@@ -61,4 +61,14 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('admin/excel/exporting', 'ExcelController@export');
     // Route::get('admin/pdfview', array('as' => 'pdfview', 'uses' => 'PdfController@pdfview'));
     Route::get('admin/pdfview', array('as' => 'pdfview1', 'uses' => 'PdfController@pdfview'));
+    //Crud Operation using ajax
+    Route::resource('ajaxproducts', 'AjaxController');
+
+    Route::get('admin/form_wizard', 'FormWizardController@index');
+    Route::get('admin/form_wizard2', 'FormWizardController@index2');
+    Route::post('admin/form_wizard/add', 'FormWizardController@add');
+
+    Route::post('admin/payment', 'PaymentController@index');
+
+    Route::get('admin/simple-qr-code', 'QRController@index');
 });
